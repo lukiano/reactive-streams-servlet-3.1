@@ -16,7 +16,9 @@ import java.util.concurrent.TimeUnit;
 @WebServlet(name = "ReactiveStreamsServlet", urlPatterns = "/*", loadOnStartup = 1, asyncSupported = true)
 public final class Servlet extends HttpServlet {
 
-    private ExecutorService executorService;
+    static final long serialVersionUID = 1L;
+
+    private transient ExecutorService executorService;
 
     @Override
     public void init() {

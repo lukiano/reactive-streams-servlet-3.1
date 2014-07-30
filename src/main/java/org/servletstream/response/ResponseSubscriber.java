@@ -26,7 +26,7 @@ final class ResponseSubscriber implements Subscriber<Byte> {
         currentSubscription.set(subscription);
     }
 
-    public void write(final Byte element) {
+    void write(final Byte element) {
         try {
             output.write(element.intValue());
             currentSubscription.get().requestMore(1);

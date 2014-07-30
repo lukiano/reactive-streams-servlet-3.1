@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicReference;
 
 final class RequestReadListener implements ReadListener {
 
-    public final AtomicReference<RequestSubscription> currentSubscription;
+    private final AtomicReference<RequestSubscription> currentSubscription;
 
     public RequestReadListener(final AtomicReference<RequestSubscription> current) {
         currentSubscription = current;
